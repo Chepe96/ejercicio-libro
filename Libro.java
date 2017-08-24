@@ -8,4 +8,18 @@ public class Libro
         titulo=tituloIni;
         autor=autorIni;
     }
+    //Metodo de acceso
+    public String dimeAutor()
+    {
+        String cadAutor="";
+        cadAutor+=autor;
+        return cadAutor;
+    }
+    
+        public String dimeTitulo()
+    {
+        String cadTitulo="";
+        cadTitulo+=titulo;
+        return cadTitulo;
+    }
 }
