@@ -4,6 +4,7 @@ public class Libro
     private String autor;
     private int paginas;
     private String numeroDeRef;
+    private int prestamos;
     //constructor
     public Libro(String tituloIni, String autorIni, int nPaginas)
     {
@@ -11,6 +12,7 @@ public class Libro
         autor=autorIni;
         paginas=nPaginas;
         numeroDeRef="";
+        prestamos=0;
     }
     //Metodo de acceso
     public String dimeAutor()
@@ -46,6 +48,9 @@ public class Libro
             numeroDeRef+="ZZZ";
         }
         cadDetalles+=numeroDeRef;
+        cadDetalles+=",";
+        cadDetalles+=" Prestamos: ";
+        cadDetalles+=prestamos;
         return cadDetalles;
     }
     
@@ -60,5 +65,17 @@ public class Libro
     public String dimeNumRef()
     {
         return numeroDeRef;
+    }
+    
+    public void prestar()
+    {
+        prestamos+=1;
+    }
+    
+    public String dimePrestamos()
+    {
+        String cadPrestamos="";
+        cadPrestamos+=prestamos;
+        return cadPrestamos;
     }
 }
